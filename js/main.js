@@ -2,7 +2,6 @@ const fullName = document.getElementById("name");
 const email = document.getElementById("email");
 const nameError = document.getElementById("name-error");
 const emailError = document.getElementById("email-error");
-const formDone = document.querySelector(".w-form-done");
 const formFail = document.querySelector(".w-form-fail");
 const submitButton = document.getElementById("submit-button");
 
@@ -50,10 +49,9 @@ submitButton.addEventListener("click", function (event) {
   // Check for errors before submitting the form
   if (hasError) {
     formFail.style.display = "block";
-    formDone.style.display = "none";
   } else {
     formFail.style.display = "none";
-    formDone.style.display = "block";
+
     // Form is valid, submit the form
     this.closest("form").submit();
   }
