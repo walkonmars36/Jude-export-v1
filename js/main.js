@@ -51,7 +51,6 @@ submitButton.addEventListener("click", function (event) {
     formFail.style.display = "block";
   } else {
     formFail.style.display = "none";
-
     // Form is valid, submit the form
     this.closest("form").submit();
   }
