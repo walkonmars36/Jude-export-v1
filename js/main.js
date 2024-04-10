@@ -89,7 +89,7 @@ window.addEventListener("scroll", () => {
   const scrollPercent =
     (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
 
-  if (scrollPercent >= 40) {
+  if (scrollPercent >= 35) {
     backToTopBtn.style.opacity = "1";
   } else {
     backToTopBtn.style.opacity = "0";

@@ -15,7 +15,8 @@
 
   --swatch--accent: var(--swatch--brand);
   --radius--large: 2rem;
-  --swatch--color-dark: #1a4c30;
+  --swatch--color-dark: rgba(26, 76, 48, 1);
+  --swatch--button-hover: rgba(26, 76, 48, 0.9);
   --swatch--transparent: rgba(255, 255, 255, 0);
   --swatch--light: #f8f8f8;
   --swatch--dark-fade: rgba(43, 46, 44, 0.8);
@@ -658,9 +659,9 @@ blockquote {
   margin-bottom: 0.5em;
 }
 
-.page_heading {
+/* .page_heading {
   padding-top: 1rem;
-}
+} */
 
 .neuro_quote--fs3 {
   border-style: none none none solid;
@@ -717,10 +718,23 @@ blockquote {
 }
 
 .accent-underline {
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.accent-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
   background-color: var(--swatch--brand);
   width: 3rem;
   height: 5px;
   display: inline-block;
+}
+
+h2.accent-underline {
+  margin-bottom: 1rem;
 }
 
 .neuro_wrap-copy {
@@ -740,6 +754,11 @@ blockquote {
   border-radius: var(--radius--small);
   background-color: var(--swatch--color-dark);
   padding: 0.5em 1.5em;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact_button:hover {
+  transform: scale(1.03);
 }
 
 .form {
