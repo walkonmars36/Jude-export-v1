@@ -69,6 +69,8 @@
   --white: white;
   --black: black;
   --max-width--30: 30rem;
+
+  /* FORM */
   /* form font error size */
   --step--2: clamp(0.7813rem, 0.7483rem + 0.1646vi, 0.88rem);
   /* form error color */
@@ -91,6 +93,9 @@
 @media screen and (max-width: 767px) {
   .w-layout-blockcontainer {
     max-width: none;
+  }
+  .contact_button {
+    width: 100%;
   }
 }
 
@@ -734,6 +739,7 @@ blockquote {
 .contact_button {
   border-radius: var(--radius--small);
   background-color: var(--swatch--color-dark);
+  padding: 0.5em 1.5em;
 }
 
 .form {
@@ -1492,4 +1498,33 @@ blockquote {
 fieldset {
   position: relative;
   padding-bottom: 1em;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid var(--swatch--color-light);
+  border-radius: var(--radius--small);
+  margin-bottom: 0.5em;
+}
+
+input:not(textarea) {
+  line-height: 1;
+  height: 2.25rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+input:focus,
+textarea:focus {
+  outline: transparent;
+  border: 1px solid var(--swatch--color-dark);
+  box-shadow: var(--shadow-medium);
 }

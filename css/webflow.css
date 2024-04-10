@@ -312,18 +312,16 @@ button,
 .w-form {
   margin: 0 0 15px;
 }
-.w-form-done,
+
 .w-form-fail {
   display: none;
   padding: 1.25em;
   margin-top: 1rem;
   text-align: center;
-  background-color: var(--swatch--color-light);
+  background-color: rgb(244, 160, 174);
   border-radius: var(--radius--small);
 }
-.w-form-fail {
-  background-color: rgb(244, 160, 174);
-}
+
 label {
   display: block;
   margin-bottom: 5px;
@@ -358,7 +356,7 @@ label {
 }
 .w-input:focus,
 .w-select:focus {
-  border-color: #3898ec;
+  border-color: green;
   outline: 0;
 }
 .w-input[disabled],

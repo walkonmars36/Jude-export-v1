@@ -545,13 +545,11 @@
                   <fieldset>
                     <label for="name">Name</label>
                     <input
-                      class="input w-input"
                       type="text"
                       name="name"
                       id="name"
                       autocomplete="name"
                       required
-                      minlength="5"
                     />
                     <span id="name-error" class="error-text font-xs-step-2"
                       >Name is required</span
@@ -561,7 +559,6 @@
                   <fieldset>
                     <label for="email">Email</label>
                     <input
-                      class="input w-input"
                       type="email"
                       name="email"
                       id="email"
@@ -575,12 +572,7 @@
 
                   <fieldset>
                     <label for="message">Message</label>
-                    <textarea
-                      class="input w-input"
-                      name="message"
-                      id="message"
-                      rows="5"
-                    ></textarea>
+                    <textarea name="message" id="message"></textarea>
                   </fieldset>
 
                   <button
