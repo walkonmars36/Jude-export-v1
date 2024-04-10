@@ -117,7 +117,9 @@
             #backToTopBtn:hover {
               transform: scale(1.05);
             }
-            li a::after {
+            a::after,
+            .read-more::after,
+            .read-less::after {
               content: "";
               position: absolute;
               bottom: 0;
@@ -128,7 +130,9 @@
               transition: all 0.3s ease-in-out;
               transform: translateX(-50%);
             }
-            li a.underline::after {
+            a.underline::after,
+            .read-more.underline::after,
+            .read-less.underline::after {
               width: 100%;
             }
           </style>
@@ -620,7 +624,7 @@
           </div>
         </div>
       </main>
-      <button class="back-to-top" id="backToTopBtn">
+      <button class="back-to-top" id="backToTopBtn" aria-label="Back to top">
         <div class="html-embed w-embed">
           <svg
             width="50"

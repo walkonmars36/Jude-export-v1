@@ -311,6 +311,7 @@ blockquote {
 }
 
 .read-less {
+  position: relative;
   font-family: var(--font-family--primary-bold);
   color: #1a4c30;
   background-color: rgba(255, 255, 255, 0);
@@ -343,6 +344,7 @@ blockquote {
 }
 
 .read-more {
+  position: relative;
   font-family: var(--font-family--primary-bold);
   color: #1a4c30;
   background-color: rgba(255, 255, 255, 0);
@@ -350,6 +352,7 @@ blockquote {
   padding: 0;
   font-size: 1.25rem;
   font-weight: 700;
+  display: inline-block;
 }
 
 .jump-link.text-large {
@@ -586,7 +589,7 @@ blockquote {
   border-left: 5px solid var(--swatch--brand);
   font-family: var(--font-family--primary-family);
   max-width: 30ch;
-  margin-top: 3rem;
+  margin-top: 2rem;
   padding-left: 1.125rem;
   font-weight: 400;
 }
@@ -844,10 +847,8 @@ h2.accent-underline {
   }
 
   .hero_wrap {
-    background-image: url("../images/hero-img.png");
     background-position: 0 0;
     background-size: cover;
-    border: 1px #000;
     border-radius: 2rem;
     margin-left: 0;
     margin-right: 0;
@@ -1496,7 +1497,7 @@ h2.accent-underline {
   font-display: swap;
 }
 
-/* FORM STYLES */
+/***************** FORM STYLES */
 
 #name-error {
   display: none;
@@ -1546,4 +1547,18 @@ textarea:focus {
   outline: transparent;
   border: 1px solid var(--swatch--color-dark);
   box-shadow: var(--shadow-medium);
+}
+
+/* FORM SUCCESS */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  max-width: 364px;
+  padding: 24px;
+  background: white;
+  color: rgb(14, 30, 37);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.16);
 }

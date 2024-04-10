@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Thank you!</title>
+    <link href="css/jude-2.webflow.css" rel="stylesheet" type="text/css" />
+    <style>
+      :root {
+        --shadow-color: 137deg 22% 24%;
+        --shadow-medium: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+          0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+          2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+          5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+      }
+      body {
+        background: var(--swatch--color-mid);
+        margin: 0;
+      }
+
+      .main {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        max-width: 22.75rem;
+        padding: 1.5rem;
+        background: white;
+        border-radius: var(--radius--small);
+        box-shadow: var(--shadow-medium);
+      }
+
+      a {
+      }
+
+      a svg {
+        position: relative;
+        top: 2px;
+      }
+
+      a:hover svg path {
+        fill: #007067;
+      }
+
+      p:last-of-type {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body cz-shortcut-listen="true">
+    <div class="main">
+      <div class="card">
+        <div class="header">
+          <h1>Thank you!</h1>
+        </div>
+        <div class="body">
+          <p>I've received your form and will be in touch soon.</p>
+
+          <p>
+            <a
+              id="back-link"
+              href="https://wom-jude-lawson-therapy.netlify.app/"
+              >← Go back to my site</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

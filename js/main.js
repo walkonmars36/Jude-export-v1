@@ -70,15 +70,14 @@ const year = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 
 readMore.addEventListener("click", () => {
-  console.log("clicked");
   moreText.classList.add("visible");
   readMore.style.display = "none";
-  readLess.style.display = "block";
+  readLess.style.display = "inline-block";
 });
 
 readLess.addEventListener("click", () => {
   moreText.classList.remove("visible");
-  readMore.style.display = "block";
+  readMore.style.display = "inline-block";
   readLess.style.display = "none";
 });
 
@@ -100,16 +99,23 @@ backToTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// nav link underline
-const links = document.querySelectorAll(".primary-navigation li a");
-links.forEach(function (link) {
-  link.addEventListener("mouseenter", function () {
-    this.classList.add("underline");
+// link underline
+function underlineOnHover(selector) {
+  const elements = document.querySelectorAll(selector);
+  elements.forEach(function (element) {
+    element.addEventListener("mouseenter", function () {
+      this.classList.add("underline");
+    });
+    element.addEventListener("mouseleave", function () {
+      this.classList.remove("underline");
+    });
   });
-  link.addEventListener("mouseleave", function () {
-    this.classList.remove("underline");
-  });
-});
+}
+
+// Usage
+underlineOnHover("a");
+underlineOnHover(".read-more");
+underlineOnHover(".read-less");
 
 // copyright
 year.textContent = currentYear;
