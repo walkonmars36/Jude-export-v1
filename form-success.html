@@ -10,6 +10,7 @@
 
     <title>Thank you!</title>
     <link href="css/jude-2.webflow.css" rel="stylesheet" type="text/css" />
+
     <style>
       :root {
         --shadow-color: 137deg 22% 24%;
@@ -18,9 +19,38 @@
           2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
           5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
       }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
       body {
         background: var(--swatch--color-mid);
-        margin: 0;
+      }
+
+      p {
+        margin-block: 1em;
+      }
+
+      a {
+        position: relative;
+      }
+
+      a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: var(--swatch--accent);
+        transition: all 0.3s ease-in-out;
+        transform: translateX(-50%);
+      }
+      a.underline::after {
+        width: 100%;
       }
 
       .main {
@@ -37,28 +67,12 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        width: 75%;
-        max-width: 22.75rem;
+        width: 95%;
+        max-width: 30rem;
         padding: 1.5rem;
-        background: white;
+        background: var(--swatch--light);
         border-radius: var(--radius--small);
         box-shadow: var(--shadow-medium);
-      }
-
-      a {
-      }
-
-      a svg {
-        position: relative;
-        top: 2px;
-      }
-
-      a:hover svg path {
-        fill: #007067;
-      }
-
-      p:last-of-type {
-        margin: 0;
       }
     </style>
   </head>
@@ -68,19 +82,34 @@
         <div class="header">
           <h1>Thank you!</h1>
         </div>
-        <div class="body">
+        <div>
           <p>I've received your form and will be in touch soon.</p>
+          <p>You can safely close this window now, or ...</p>
 
-          <p>
-            <a
-              id="back-link"
-              href="https://wom-jude-lawson-therapy.netlify.app/"
-              >← Go back to my site</a
-            >
-          </p>
+          <a
+            class=""
+            id="back-link"
+            href="https://wom-jude-lawson-therapy.netlify.app/"
+            >← Go back to my site</a
+          >
         </div>
       </div>
     </div>
-    <script src="js/main.js"></script>
+
+    <script>
+      function underlineOnHover(selector) {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach(function (element) {
+          element.addEventListener("mouseenter", function () {
+            this.classList.add("underline");
+          });
+          element.addEventListener("mouseleave", function () {
+            this.classList.remove("underline");
+          });
+        });
+      }
+
+      underlineOnHover("a");
+    </script>
   </body>
 </html>
