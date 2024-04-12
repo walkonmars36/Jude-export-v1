@@ -142,15 +142,17 @@ h2 {
 }
 
 h3 {
+  font-family: var(--font-family--primary-bold);
+  color: var(--theme--text-color-dark);
+  line-height: var(--line-height--1);
   font-weight: 700;
-  line-height: 30px;
   font-size: clamp(
     var(--font-min--h3),
     1.771rem + 0.8651vi,
     var(--font-max--h3)
   );
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 h4 {
@@ -200,7 +202,9 @@ blockquote {
 }
 
 .container {
-  padding-top: 75px;
+  max-width: 55rem;
+  margin: 3rem auto;
+  padding: 0 1rem;
 }
 
 .h2 {
@@ -583,6 +587,8 @@ blockquote {
   flex-direction: column;
   display: block;
   position: relative;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .about_heading--fs3 {
@@ -989,11 +995,6 @@ h2.accent-underline {
 
   .background_layer_fade {
     width: 100%;
-  }
-
-  .hero_section {
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 
   .nav_container {

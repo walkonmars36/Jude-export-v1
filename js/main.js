@@ -113,7 +113,7 @@ function underlineOnHover(selector) {
 }
 
 // Usage
-underlineOnHover("a");
+underlineOnHover("li a");
 underlineOnHover(".read-more");
 underlineOnHover(".read-less");
 
