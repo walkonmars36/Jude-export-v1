@@ -17,7 +17,7 @@ let hasError = false;
 
 function toggleAriaExpanded() {
   const currentExpanded = menuBtn.getAttribute("aria-expanded");
-  const newExpanded = currentExpanded === "true" ? "false" : "true";
+  const newExpanded = currentExpanded === "false" ? "true" : "false";
   menuBtn.setAttribute("aria-expanded", newExpanded);
 }
 
