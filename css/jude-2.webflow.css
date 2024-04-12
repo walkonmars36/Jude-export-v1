@@ -180,6 +180,11 @@ a {
   );
   text-decoration: none;
 }
+a:hover,
+.read-more:hover,
+.read-less:hover {
+  color: var(--swatch--button-hover);
+}
 
 img {
   object-fit: cover;
