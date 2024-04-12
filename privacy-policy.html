@@ -91,6 +91,12 @@
               min-height: 100dvh;
             }
 
+            .container {
+              max-width: 65ch;
+              padding: 0 clamp(1rem, -0.0435rem + 5.2174vi, 4rem);
+              margin: 4rem auto;
+            }
+
             .read-less {
               display: none;
             }
@@ -140,10 +146,15 @@
               width: 100%;
             }
 
+            h2.h3,
+            h3.h4 {
+              padding-top: 0.5em;
+            }
+
             @media screen and (max-width: 991px) {
               .light-fade-bg {
                 z-index: auto;
-                bottom: 94%;
+                bottom: 95%;
               }
             }
           </style>
@@ -181,7 +192,7 @@
         </div>
       </div>
       <div class="light-fade-bg"></div>
-      <section class="nav_section">
+      <section class="nav_section" id="nav">
         <div class="nav_container">
           <a href="index.html" class="logo_wrap w-inline-block">
             <div class="logo_content_wrap">
@@ -269,7 +280,7 @@
           </div>
         </section>
         <section>
-          <div class="container">
+          <div class="container flow">
             <h2>Privacy notice</h2>
             <p>
               In order to provide you with the best service possible I need to
@@ -279,15 +290,13 @@
               after therapy has ended. Your privacy is very important to me and
               you can be confident that your personal information will be kept
               safe and secure and will only be used for the purpose it was given
-              to me. I adhere to current data protection legislation, including
-              the General Data Protection Regulation (EU/2016/679) (the GDPR),
-              the Data Protection Act 2018 and the Privacy and Electronic
-              Communications (EC Directive) Regulations 2003. I also adhere to
-              the ethical guidelines regarding protecting client privacy and
-              confidentiality set by the British Association for Counselling and
-              Psychotherapy (BACP).
+              to me. I adhere to the Data Protection Act 2018, the UK’s
+              implementation of the General Data Protection Regulation (GDPR). I
+              also adhere to the ethical guidelines regarding protecting client
+              privacy and confidentiality set by the British Association for
+              Counselling and Psychotherapy (BACP).
             </p>
-            <h2>
+            <h2 class="h3">
               My lawful basis for holding and using your personal information
             </h2>
             <p>
@@ -308,7 +317,7 @@
               contract with a health professional (in this case, a contract
               between me and you).
             </p>
-            <h2>How I use your information</h2>
+            <h2 class="h3">How I use your information</h2>
             <p>
               I will never use your personal data for any purposes other than
               the administration of the therapy service that I am providing to
@@ -317,14 +326,14 @@
               This is in line with guidance from the Information Commissioner’s
               Office.
             </p>
-            <h3>Initial contact:</h3>
+            <h3 class="h4">Initial contact:</h3>
             <p>
-              When you contact me to book your first appointment I will collect
-              some brief information to help me to process your enquiry. This
-              will include your name so that I can book the appointment into my
-              diary and also a contact method, for example an email address or
-              phone number. This information is requested so that you could be
-              informed if I was unable to attend an appointment due to
+              When you contact me to book your 20 minute first meeting I will
+              collect some brief information to help me to process your enquiry.
+              This will include your name so that I can book the appointment
+              into my diary and also a contact method, for example an email
+              address or phone number. This information is requested so that you
+              could be informed if I was unable to attend an appointment due to
               unforeseen circumstances. If you do not want to be contacted under
               any circumstances you do not need to provide a contact method.
               Alternatively, an organisation such as your employer may send me
@@ -334,7 +343,7 @@
               personal data is deleted within one month. If you would like me to
               delete this information sooner please let me know.
             </p>
-            <h3>While you are accessing therapy:</h3>
+            <h3 class="h4">While you are accessing therapy:</h3>
             <p>
               Your email address or phone number will be used to provide you
               with written confirmation of your appointment times if you have
@@ -344,20 +353,20 @@
               email you information that is relevant to your therapy sessions.
             </p>
             <p>
-              At the beginning of your first appointment I will ask you to
-              complete a personal details form containing your name, address,
-              date of birth, contact information and also contact information
-              for your GP. The form is stored in a ################. Please be
-              aware that I will not routinely contact your GP to inform your GP
-              of your attendance as your attendance is confidential. To fulfil
-              my duty of care towards you while also maintaining your
-              confidentiality I will only contact your GP if it is necessary and
-              should these circumstances arise I would discuss this with you
-              wherever possible before contacting your GP.
+              Once we have agreed to work together and before your first
+              appointment, I will ask you to complete a new client information
+              form containing your name, address, date of birth, contact
+              information, contact information for your GP, general health
+              information and reason for seeking support. This form is then
+              stored on a password protected hard drive. To fulfill my duty of
+              care towards you while also maintaining your confidentiality I
+              will only contact your GP if it is necessary and should these
+              circumstances arise I would discuss this with you wherever
+              possible before contacting your GP.
             </p>
             <p>
               Rest assured that what is said in our sessions will be kept
-              confidential. I am an Accredited Member of the British Association
+              confidential. I am a Registered Member of the British Association
               of Counselling & Psychotherapy (BACP) and I abide by their
               professional code of ethics. Confidentiality will only be broken
               if there are legal or ethical obligations to disclose, for
@@ -375,14 +384,14 @@
               abides by the BACP’s code of ethics regarding confidentiality.
             </p>
             <p>
-              I keep brief notes of our therapy sessions for the purpose of
-              assisting our work together. The notes help me to keep track of
+              I keep brief process notes of our therapy sessions for the purpose
+              of assisting our work together. The notes help me to keep track of
               the issues that we are working on and they are for my use only.
               The notes do not include any personal details that could be used
-              to identify you and they are stored ##########. Your therapy notes
-              are stored separately to your personal details form.
+              to identify you and they are stored in a locked cabinet. Your
+              therapy notes are stored separately to your personal details form.
             </p>
-            <h3>After therapy has ended:</h3>
+            <h3 class="h4">After therapy has ended:</h3>
             <p>
               There are reasons why counsellors are required to keep records
               after therapy has ended. For example, in the case of financial
@@ -392,10 +401,11 @@
               you an efficient service if you make contact after therapy has
               ended. Your therapy notes do not include any personal details that
               could be used to identify you and continue to be stored securely
-              in a ####################### for seven years after therapy has
-              ended. This time frame adheres with current industry guidelines.
-              Seven years after therapy has ended your therapy notes will be
-              confidentially destroyed.
+              in a locked filing cabinet for three years after therapy has
+              ended. This time frame adheres to BACP guidelines. Three years
+              after therapy has ended your therapy notes will be confidentially
+              destroyed. Your new client information form is confidentially
+              destroyed on ending your therapy sessions.
             </p>
             <p>
               Your personal details form is confidentially destroyed on ending
@@ -406,30 +416,86 @@
               and therefore enables me to identify your therapy notes if
               necessary.
             </p>
-            <h2>Third party recipients of personal data</h2>
-            <p>
-              I share a limited amount of personal data with third parties in
-              order to provide therapy services to you, for example if you
-              contact me to book an appointment I will give your name to
-              reception at the location where your appointment is due to take
-              place (if applicable), in order to book your appointment at that
-              location. If your appointments are paid for or arranged via a
-              third party, for example, your employer, the only information
-              shared with the third party is your dates of attendance and
-              non-attendance for invoicing and payment purposes. Details about
-              what is discussed in your appointments will remain confidential
-              and can only be shared if you give me your written consent to do
-              so.
-            </p>
-            <h2>Data security</h2>
+
+            <h2 class="h3">Data security</h2>
             <p>
               I take the security of the data that I hold about you very
               seriously. My email account is password protected and mobile
               phones and laptops used to respond to your emails are password
               protected. Any email correspondence will be deleted within one
               month if it is not necessary to keep it. If it is necessary to
-              retain the information I will print the email and store it
-              securely ############ that only I have access to.
+              retain the information I will screen shot the information and
+              store it on a password protected hard drive, deleting the original
+              from my email account.
+            </p>
+            <h2 class="h3">Website visitors</h2>
+            <p>
+              By accessing the website, you are consenting to the information
+              collection and use practices described in this privacy notice.
+              Should you choose to contact me using the contact form on the
+              website none of the data that you supply will be stored by the
+              website or passed to any third party data processors. Instead the
+              data will be collated into an email and sent to me over the Simple
+              Mail Transfer Protocol (SMTP). SMTP servers are protected by TLS
+              (sometimes known as SSL) meaning that the email content is
+              encrypted before being sent across the internet. The email content
+              is then decrypted by local computers and devices.
+            </p>
+            <h2 class="h3">Your rights</h2>
+            <p>
+              Under GDPR, 2018 guidelines you have the following rights: The
+              right to request access to the personal information that I store
+              and process about you. You can ask for corrections to be made to
+              the information held or for your personal information to be
+              deleted. You can also ask me to restrict the processing of your
+              personal information or to object to the processing of it
+              altogether in some circumstances. You can read more about your
+              rights at ico.org.uk/your-data-matters.
+            </p>
+            <p>
+              If you would like to make a request relating to any of the rights
+              above, please send a request in writing by emailing
+              <a
+                href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#117;&#100;&#101;&#64;&#106;&#117;&#100;&#101;&#108;&#97;&#119;&#115;&#111;&#110;&#116;&#104;&#101;&#114;&#97;&#112;&#121;&#46;&#99;&#111;&#46;&#117;&#107;&#46;"
+                >&#106;&#117;&#100;&#101;&#64;&#106;&#117;&#100;&#101;&#108;&#97;&#119;&#115;&#111;&#110;&#116;&#104;&#101;&#114;&#97;&#112;&#121;&#46;&#99;&#111;&#46;&#117;&#107;&#46;</a
+              >
+              Please be aware that in certain situations I may be unable to
+              comply with the above requests. For example, if compelled to
+              retain the records by a court of law. Please also be aware that
+              there may be a charge for complying with a request if it is deemed
+              to be excessive in nature.
+            </p>
+            <h2 class="h3">Queries</h2>
+            <p>
+              ‘Data controller’ is the term used to describe the person or
+              organisation that collects and stores and has responsibility for
+              people’s personal data. In this instance, I am the data controller
+              for Jude Lawson Therapy and I am registered with the Information
+              Commissioner’s Office: the registration reference for Jude Lawson
+              Therapy Services is ZB531085 If you have any questions about this
+              privacy policy or the way in which I handle your personal
+              information you can email me at
+              <a
+                href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#117;&#100;&#101;&#64;&#106;&#117;&#100;&#101;&#108;&#97;&#119;&#115;&#111;&#110;&#116;&#104;&#101;&#114;&#97;&#112;&#121;&#46;&#99;&#111;&#46;&#117;&#107;&#46;"
+                >&#106;&#117;&#100;&#101;&#64;&#106;&#117;&#100;&#101;&#108;&#97;&#119;&#115;&#111;&#110;&#116;&#104;&#101;&#114;&#97;&#112;&#121;&#46;&#99;&#111;&#46;&#117;&#107;&#46;</a
+              >
+            </p>
+            <h2 class="h3">Complaints</h2>
+            <p>
+              If you have a complaint about how I handle your personal data
+              please do not hesitate to get in touch by email at
+              <a
+                href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#117;&#100;&#101;&#64;&#106;&#117;&#100;&#101;&#108;&#97;&#119;&#115;&#111;&#110;&#116;&#104;&#101;&#114;&#97;&#112;&#121;&#46;&#99;&#111;&#46;&#117;&#107;&#46;"
+                >&#106;&#117;&#100;&#101;&#64;&#106;&#117;&#100;&#101;&#108;&#97;&#119;&#115;&#111;&#110;&#116;&#104;&#101;&#114;&#97;&#112;&#121;&#46;&#99;&#111;&#46;&#117;&#107;&#46;</a
+              >
+              If you want to make a formal complaint about the way I have
+              processed your personal information you can contact the ICO which
+              is the statutory body that oversees data protection law in the UK.
+              For more information go to
+              <a
+                href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#116;&#116;&#112;&#115;&#58;&#47;&#47;&#105;&#99;&#111;&#46;&#111;&#114;&#103;&#46;&#117;&#107;&#47;&#109;&#97;&#107;&#101;&#45;&#97;&#45;&#99;&#111;&#109;&#112;&#108;&#97;&#105;&#110;&#116;"
+                >&#104;&#116;&#116;&#112;&#115;&#58;&#47;&#47;&#105;&#99;&#111;&#46;&#111;&#114;&#103;&#46;&#117;&#107;&#47;&#109;&#97;&#107;&#101;&#45;&#97;&#45;&#99;&#111;&#109;&#112;&#108;&#97;&#105;&#110;&#116;</a
+              >.
             </p>
           </div>
         </section>
@@ -441,7 +507,8 @@
               <p>
                 &copy;
                 <span class="year"></span>
-                Jude Lawson • <a href="#">Privacy Policy</a>
+                Jude Lawson •
+                <a class="privacy-policy" href="#nav">Privacy Policy</a>
               </p>
             </div>
           </div>

@@ -9,8 +9,23 @@ const readLess = document.querySelector(".read-less");
 const moreText = document.querySelector(".therapy_read-more");
 const backToTopBtn = document.getElementById("backToTopBtn");
 const year = document.querySelector(".year");
+const menuBtn = document.querySelector(".mob-menu-btn");
 
 let hasError = false;
+
+// Mobile menu
+
+function toggleAriaExpanded() {
+  const currentExpanded = menuBtn.getAttribute("aria-expanded");
+  const newExpanded = currentExpanded === "true" ? "false" : "true";
+  menuBtn.setAttribute("aria-expanded", newExpanded);
+}
+
+if (menuBtn) {
+  menuBtn.addEventListener("click", toggleAriaExpanded);
+}
+
+// Form validation
 if (fullName && email && nameError && emailError && formFail && submitButton) {
   fullName.addEventListener("blur", function () {
     if (fullName.value === "") {
@@ -127,6 +142,6 @@ function underlineOnHover(selector) {
 }
 
 // Usage
-underlineOnHover("li a");
+underlineOnHover("a:not(.logo_wrap");
 underlineOnHover(".read-more");
 underlineOnHover(".read-less");
