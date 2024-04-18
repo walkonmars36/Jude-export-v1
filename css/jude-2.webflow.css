@@ -1117,7 +1117,7 @@ h2.accent-underline {
   .hero_wrap {
     border-radius: var(--radius--medium);
     -webkit-text-fill-color: inherit;
-    background-image: url("../images/hero-img-1280.webp");
+    background-image: url("../images/hero-img.webp");
     background-position: 0 0;
     background-size: cover;
     background-clip: border-box;
