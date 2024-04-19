@@ -1580,3 +1580,11 @@ textarea:focus {
     margin-top: 1rem;
   }
 }
+
+.jude-email {
+  color: var(--swatch--color-mid);
+}
+
+.jude-email b {
+  display: none;
+}
